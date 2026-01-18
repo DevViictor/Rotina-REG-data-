@@ -19,7 +19,7 @@ def modelos_prontos():
     with cola:
             st.title("📝 R.E.G - MODELOS")
 
-
+    st.cache_data(ttl=60)
     def carregar_modelo():
 
         conn = conexao()
