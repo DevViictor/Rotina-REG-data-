@@ -4,7 +4,6 @@ from PIL import Image
 from db import conexao
 
 
-
 def visualizar_registros():
 
     icon = Image.open("image/vivo.png")

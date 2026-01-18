@@ -69,7 +69,7 @@ def criar_tarefa():
         with cola:
             data = st.date_input("Data da tarefa :")
 
-        recorrenciaS= ["","Diária","Semanal","Mensal","Anual"]
+        recorrenciaS= ["","Diária","Semanal","Semanal Laboral(seg a sab)","Mensal","Anual"]
         
         with colb:
             recorrencia = st.selectbox("Tipo de recorrência :",recorrenciaS)
