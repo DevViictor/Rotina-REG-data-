@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 from db import conexao
-import matplotlib.pyplot as plt
+
 
 
 def visualizar_registros():
