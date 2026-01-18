@@ -93,20 +93,25 @@ def visualizar_registros():
 
     df = carregar_tarefas()
     
+
+    col1,col2 = st.columns(2)
+
     # filtro com selectbox
-    carteira = st.selectbox(
-        "Selecione a carteira",
-        options=list(carteiras.keys())
-                )
-    
+    with col1:
+        carteira = st.selectbox(
+                "Selecione a carteira",
+                options=list(carteiras.keys())
+                        )
+        
     #filtro de data
-    periodo = st.date_input(
-    "Selecione o período",
-    value=(
-        df["data"].min().date(),
-        df["data"].max().date()
-    )
-   ) 
+    with col2:
+        periodo = st.date_input(
+        "Selecione o período",
+        value=(
+                df["data"].min().date(),
+                df["data"].max().date()
+        )
+        ) 
     
     #aviso para seleioncar os periodos
     if not isinstance(periodo, tuple) or len(periodo) != 2:
