@@ -195,7 +195,7 @@ def tarefas_gilvania():
     def carregar_dados():
         conn = conexao()
 
-        sql = """ SELECT id,titulo,gl,hora,data FROM tarefas""" 
+        sql = """ SELECT * FROM tarefas""" 
 
         df = pd.read_sql(sql,conn)
         conn.close()
