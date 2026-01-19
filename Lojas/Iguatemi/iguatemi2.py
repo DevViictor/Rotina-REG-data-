@@ -42,7 +42,7 @@ def tarefas_andressa():
     def carregar_registros():
         conn = conexao()
 
-        sql = """ SELECT * FROM registros""" 
+        sql = """ SELECT id,titulo,gl,hora,data FROM registros""" 
 
         dfr = pd.read_sql(sql,conn)
         dfr["data"] = pd.to_datetime(dfr["data"])
@@ -210,7 +210,7 @@ def tarefas_diego():
     def carregar_registros():
         conn = conexao()
 
-        sql = """ SELECT * FROM registros""" 
+        sql = """ SELECT id,titulo,gl,hora,data FROM registros""" 
 
         dfr = pd.read_sql(sql,conn)
         dfr["data"] = pd.to_datetime(dfr["data"])
