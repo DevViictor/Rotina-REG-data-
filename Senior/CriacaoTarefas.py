@@ -54,7 +54,7 @@ def criar_tarefa():
 
         titulo = st.text_input("Título da tarefa : ",key="titulo")
 
-        descricao = st.text_input("Descrição da tarfa : ",key="descricao")
+        descricao = st.text_input("Descrição da tarefa : ",key="descricao")
 
         col1,col2 = st.columns(2)
         

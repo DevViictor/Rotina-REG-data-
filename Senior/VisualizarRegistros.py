@@ -17,7 +17,7 @@ def visualizar_registros():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - EXECUÇÕES DE TAREFAS")
+            st.title("📝 R.E.G - TAREFAS CONCLUÍDAS")
 
     #lista de dicionarios , separados por carteira e seus recpetivos gls
     carteiras = {
