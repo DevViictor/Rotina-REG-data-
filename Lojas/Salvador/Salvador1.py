@@ -195,7 +195,7 @@ def tarefas_vinicius():
     def carregar_dados():
         conn = conexao()
 
-        sql = """ SELECT id,titulo,gl,hora,data FROM tarefas""" 
+        sql = """ SELECT * FROM tarefas""" 
 
         df = pd.read_sql(sql,conn)
         conn.close()
@@ -205,7 +205,7 @@ def tarefas_vinicius():
     def carregar_registros():
         conn = conexao()
 
-        sql = """ SELECT * FROM registros""" 
+        sql = """ SELECT id,titulo,gl,hora,data FROM registros""" 
 
         dfr = pd.read_sql(sql,conn)
         dfr["data"] = pd.to_datetime(dfr["data"])
