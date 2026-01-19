@@ -19,7 +19,7 @@ def visualizar_tarefas():
     with cola:
             st.title("📝 R.E.G - TAREFAS")
 
-    periodos = ["GLS(ABERTURA)", "GLS(INTERMEDIO)", "GLS(FECHAMENTO)"]
+    periodos = ["GLS(ABERTURA)", "GLS(INTERMEDIO)", "GLS(FECHAMENTO)","ITINERANTES"]
 
 
     periodo = st.selectbox("Selecione o período",periodos)
