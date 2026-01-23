@@ -4,7 +4,7 @@ from db import conexao
 from PIL import Image
 from datetime import datetime
 from zoneinfo import ZoneInfo
-
+from db import registrar_folga
 
 def tarefas_danilo():
     
@@ -158,17 +158,37 @@ def tarefas_danilo():
         conn.close()
 
 
-    if st.button("📌 Registrar tarefas"):
+    col1,col2 = st.columns(2)
 
-        selecionados = editado[editado["registrar"] == True]
+    with col1:
+        if st.button("📌 Registrar tarefas"):
 
-        if selecionados.empty:
-            st.warning("⚠️ Nenhuma tarefa selecionada")
-        else:
-            registrar_tarefas(selecionados)
-            st.success("✅ Tarefas registradas com sucesso!")
-        st.cache_data.clear()
-        st.rerun()
+            selecionados = editado[editado["registrar"] == True]
+
+            if selecionados.empty:
+                st.warning("⚠️ Nenhuma tarefa selecionada")
+            else:
+                registrar_tarefas(selecionados)
+                st.success("✅ Tarefas registradas com sucesso!")
+            st.cache_data.clear()
+            st.rerun()
+
+    with col2:
+        if st.button("Registrar folga"):
+            FUSO_BR = ZoneInfo("America/Sao_Paulo")
+
+            agora = datetime.now(FUSO_BR)
+
+            data_atual = agora.date()
+            
+            gl = "Danilo"
+            loja= "BELA"
+            data = data_atual
+
+            registrar_folga(gl,loja,data)
+            st.success("Folga registrada ✅")
+     
+             
 
 
 def tarefas_vanessa():
@@ -322,16 +342,36 @@ def tarefas_vanessa():
         conn.commit()
         conn.close()
 
-    if st.button("📌 Registrar tarefas"):
+    col1,col2 = st.columns(2)
 
-        selecionados = editado[editado["registrar"] == True]
+    with col1:
+        if st.button("📌 Registrar tarefas"):
 
-        if selecionados.empty:
-            st.warning("⚠️ Nenhuma tarefa selecionada")
-        else:
-            registrar_tarefas(selecionados)
-            st.success("✅ Tarefas registradas com sucesso!")
-        st.cache_data.clear()
-        st.rerun()
+            selecionados = editado[editado["registrar"] == True]
+
+            if selecionados.empty:
+                st.warning("⚠️ Nenhuma tarefa selecionada")
+            else:
+                registrar_tarefas(selecionados)
+                st.success("✅ Tarefas registradas com sucesso!")
+            st.cache_data.clear()
+            st.rerun()
+
+    with col2:
+        if st.button("Registrar folga"):
+            FUSO_BR = ZoneInfo("America/Sao_Paulo")
+
+            agora = datetime.now(FUSO_BR)
+
+            data_atual = agora.date()
+            
+            gl = "Vanessa"
+            loja= "BELA"
+            data = data_atual
+
+            registrar_folga(gl,loja,data)
+            st.success("Folga registrada ✅")
+     
+             
 
 

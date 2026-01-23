@@ -18,6 +18,18 @@ from Lojas.Piedade.piedade import tarefas_diegoP,tarefas_marcusp
 from Lojas.Barra.Barra import tarefas_alana,tarefas_carol,tarefas_igor
 from Lojas.Boulevard.boulevard  import tarefas_bruno,tarefas_camyla,tarefas_gilvania
 from Lojas.Itinerante.itinerantes import tarefas_lazaro,tarefas_lee,tarefas_marcus
+from Lojas.Ferias.iguatemi_ferias import ferias_iguatemi1,ferias_iguatemi2
+from Lojas.Ferias.barra_ferias import ferias_barra
+from Lojas.Ferias.bela_ferias import ferias_bela
+from Lojas.Ferias.boulevard_ferias  import ferias_boulevard
+from Lojas.Ferias.lapa_ferias import ferias_lapa
+from Lojas.Ferias.norte_ferias import ferias_norte
+from Lojas.Ferias.paralela_ferias import ferias_paralela
+from Lojas.Ferias.piedade_ferias import ferias_piedade
+from Lojas.Ferias.ssa_ferias import ferias_ssa1,ferias_ssa2
+from Lojas.Ferias.parque_ferias import ferias_parque
+from Lojas.Ferias.davila_ferias import ferias_davila
+from Lojas.Ferias.itinerante_ferias import ferias_itinerantes
 
 
 st.sidebar.image("image/Image (2).png")
@@ -83,7 +95,7 @@ def run_navigation():
     Modelos_prontos = st.Page(modelos_prontos, title="Modelos prontos", icon="📋")
 
     #visualização dos registros
-    Visualizar_registros = st.Page(visualizar_registros, title="D-1", icon="📊")
+    Visualizar_registros = st.Page(visualizar_registros, title="Relatório", icon="📊")
     
     #Carteira de Felipe
 
@@ -139,7 +151,33 @@ def run_navigation():
     Tarefas_marcus = st.Page(tarefas_marcus, title="Suas tarefas")
     Tarefas_lazaro = st.Page(tarefas_lazaro, title="Suas tarefas")
 
+    #Ferias
 
+    #Carteira felipe
+
+    Ferias_iguatemi1 = st.Page(ferias_iguatemi1, title="R.E.G - FÉRIAS")
+    Ferias_iguatemi2 = st.Page(ferias_iguatemi2, title="R.E.G - FÉRIAS")
+    Ferias_norte = st.Page(ferias_norte, title="R.E.G - FÉRIAS")
+
+    #Carteira Fabiana
+
+    Ferias_ssa1 = st.Page(ferias_ssa1, title="R.E.G - FÉRIAS")
+    Ferias_ssa2 = st.Page(ferias_ssa2, title="R.E.G - FÉRIAS")
+    Ferias_bela = st.Page(ferias_bela, title="R.E.G - FÉRIAS")
+    Ferias_paralela = st.Page(ferias_paralela, title="R.E.G - FÉRIAS")
+    Ferias_parque = st.Page(ferias_parque, title="R.E.G - FÉRIAS")
+    Ferias_davila = st.Page(ferias_davila, title="R.E.G - FÉRIAS")
+    
+    #Carteira John
+    Ferias_piedade = st.Page(ferias_piedade, title="R.E.G - FÉRIAS")
+    Ferias_lapa = st.Page(ferias_lapa, title="R.E.G - FÉRIAS") 
+    Ferias_barra = st.Page(ferias_barra, title="R.E.G - FÉRIAS") 
+    
+    #Carteira Chrys
+    Ferias_boulevard = st.Page(ferias_boulevard, title="R.E.G - FÉRIAS")
+
+    #Itinerantes
+    Ferias_itinerantes = st.Page(ferias_itinerantes, title="R.E.G - FÉRIAS")
 
     # Menus por role
     if role == "Victor":
@@ -165,6 +203,12 @@ def run_navigation():
             ]
         }
 
+        menu4 = {
+            "Nada": [
+                
+            ]
+        }
+
     if role == "Iguatemi1":
 
         menu = {
@@ -183,8 +227,14 @@ def run_navigation():
         }
 
         menu3 = {
-            "NADA": [
-               
+            "REGISTRAR FÉRIAS": [
+               Ferias_iguatemi1
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
+                
             ]
         }
     
@@ -207,8 +257,15 @@ def run_navigation():
         }
 
         menu3 = {
-            "NADA": [
+            "REGISTRAR FÉRIAS": [
+                Ferias_iguatemi2
                
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
+                
             ]
         }
 
@@ -229,8 +286,14 @@ def run_navigation():
         }
 
         menu3 = {
-            "NADA": [
-               
+            "REGISTRAR FÉRIAS": [
+               Ferias_norte
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
+                
             ]
         }
     
@@ -246,15 +309,18 @@ def run_navigation():
         menu2 = {
             "GLS(INTERMÉDIO)": [
                 Tarefas_francisca
-
-
-
             ]
         }
 
         menu3 = {
             "GLS(FECHAMENTO)": [
                 Tarefas_vinicius
+            ]
+        }
+
+        menu4 = {
+            "REGISTRAR FÉRIAS": [
+                Ferias_ssa1
             ]
         }
     
@@ -274,7 +340,14 @@ def run_navigation():
         }
 
         menu3 = {
-            "NADA": [
+            "REGISTRAR FÉRIAS": [
+                Ferias_ssa2
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
+                
             ]
         }
 
@@ -294,7 +367,14 @@ def run_navigation():
         }
 
         menu3 = {
-            "NADA": [
+            "REGISTRAR FÉRIAS": [
+                Ferias_bela
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
+                
             ]
         }
     
@@ -314,7 +394,14 @@ def run_navigation():
         }
 
         menu3 = {
-            "NADA": [
+            "REGISTRAR FÉRIAS": [
+                Ferias_paralela
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
+                
             ]
         }
     
@@ -334,7 +421,14 @@ def run_navigation():
         }
 
         menu3 = {
-            "NADA": [
+            "REGISTRAR FÉRIAS": [
+                Ferias_parque
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
+                
             ]
         }
     
@@ -348,13 +442,19 @@ def run_navigation():
         }
 
         menu2 = {
-            "nada": [
-                
+            "REGISTRAR FÉRIAS": [
+                Ferias_davila
             ]
         }
 
         menu3 = {
             "nada": [
+                
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
                 
             ]
         }
@@ -376,7 +476,13 @@ def run_navigation():
         }
 
         menu3 = {
-            "nada": [
+            "REGISTRAR FÉRIAS": [
+                Ferias_lapa
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
                 
             ]
         }
@@ -398,7 +504,14 @@ def run_navigation():
         }
 
         menu3 = {
-            "nada": [
+            "REGISTRAR FÉRIAS": [
+                Ferias_piedade
+                
+            ]
+        }
+
+        menu4 = {
+            "Nada": [
                 
             ]
         }
@@ -426,6 +539,12 @@ def run_navigation():
                 Tarefas_igor
             ]
         }
+
+        menu4 = {
+            "REGISTRAR FÉRIAS": [
+                Ferias_barra
+            ]
+        }
     
     if role == "Boulevard":
 
@@ -446,6 +565,12 @@ def run_navigation():
         menu3 = {
             "GLS(FECHAMENTO)": [
                 Tarefas_gilvania
+            ]
+        }
+
+        menu4 = {
+            "REGISTRAR FÉRIAS": [
+                Ferias_boulevard
             ]
         }
     
@@ -470,14 +595,18 @@ def run_navigation():
                 Tarefas_lazaro
             ]
         }
-    
 
+        menu4 = {
+            "REGISTRAR FÉRIAS": [
+                Ferias_itinerantes
+            ]
+        }
     
 
 
     # Criar navegação
     
-    soma = {**menu,**menu2,**menu3}
+    soma = {**menu,**menu2,**menu3,**menu4}
 
     nav = st.navigation(soma)
 

@@ -1,7 +1,6 @@
 import streamlit as st
 import psycopg2
 
-
 # CONEXÃO PARA O BANCO DE DADOS 
 
 
@@ -51,6 +50,43 @@ conn.commit()
 cursor.close()
 conn.close()
 
+#tabela de folga 
+
+conn =  conexao()
+cursor = conn.cursor()
+
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS folgas(
+        id SERIAL PRIMARY KEY,
+        gl TEXT,
+        loja TEXT,
+        data DATE);
+               
+    """)
+
+conn.commit()
+cursor.close()
+conn.close()
+
+
+#tabela de ferias 
+
+conn = conexao()
+cursor = conn.cursor()
+
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS ferias(
+               id SERIAL PRIMARY KEY,
+               gl TEXT,
+               loja TEXT,
+               data_saida DATE,
+               data_retorno DATE);
+""")
+
+conn.commit()
+cursor.close()
+conn.close()
+
 
 #DADOS INSERIDOS NA TABELA 
 def inserir_dados(periodo,titulo,descricao,horaI,horaF,data,recorrencia):
@@ -84,6 +120,7 @@ def inserir_dados(periodo,titulo,descricao,horaI,horaF,data,recorrencia):
     conn.close()
 
 
+#Salvar tarefa
 
 def salvar_tarefas(titulo,descricao,data):
  
@@ -105,4 +142,52 @@ def salvar_tarefas(titulo,descricao,data):
     conn.commit()
     cursor.close()
     conn.close()
+
+#registrar folga
+
+def registrar_folga(gl,loja,data):
+
+    conn = conexao()
+    cursor = conn.cursor()
+
+    sql = """
+        INSERT INTO folgas (
+        gl,
+        loja,
+        data
+        ) VALUES(%s,%s,%s)
+        ON CONFLICT ON CONSTRAINT unique_folga DO NOTHING
+    """
+    cursor.execute(
+    sql,
+    (gl,loja,data)
+    )
+
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+#registar ferias
+
+def registar_ferias(gl,loja,data_saida,data_retorno):
     
+    conn = conexao()
+    cursor = conn.cursor()
+
+    sql = """
+        INSERT INTO ferias (
+        gl,
+        loja,
+        data_saida,
+        data_retorno
+        ) VALUES(%s,%s,%s,%s)
+        ON CONFLICT ON CONSTRAINT unique_ferias DO NOTHING
+        """
+    cursor.execute(
+        sql,
+        (gl,loja,data_saida,data_retorno)
+        )
+
+    conn.commit()
+    cursor.close()
+    conn.close()
