@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from PIL import Image
-from db import conexao
+from data.db import conexao
 
 
 def visualizar_registros():

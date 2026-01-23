@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-from db import conexao
+from data.db import conexao
 from PIL import Image
 from datetime import datetime
 from zoneinfo import ZoneInfo
-from db import registrar_folga
+from data.db import registrar_folga
 
 
 def tarefas_deniseP():

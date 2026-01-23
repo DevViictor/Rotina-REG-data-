@@ -1,7 +1,7 @@
 
 import streamlit as st
 import pandas as pd
-from db import registar_ferias
+from data.db import registar_ferias
 from PIL import Image
 
 def ferias_bela():

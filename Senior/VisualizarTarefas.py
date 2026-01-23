@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from db import conexao
+from data.db import conexao
 from PIL import Image
 
 

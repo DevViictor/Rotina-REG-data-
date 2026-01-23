@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from db import conexao,registrar_folga
+from data.db import conexao,registrar_folga
 from PIL import Image
 from datetime import datetime
 from zoneinfo import ZoneInfo

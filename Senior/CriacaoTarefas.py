@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
-from db import inserir_dados,salvar_tarefas
-from db import conexao
+from data.db import inserir_dados,salvar_tarefas
+from data.db import conexao
 import pandas as pd
 
 
