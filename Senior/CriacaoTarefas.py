@@ -22,7 +22,7 @@ def criar_tarefa():
         st.image(image_logo)
 
     with cola:
-        st.header("R.E.G - Rotina de Excelência Gerencial")
+        st.header("R.E.G - Rotina de Eficiência Gerencial")
 
     def carregar_modelos():
         conn = conexao()
