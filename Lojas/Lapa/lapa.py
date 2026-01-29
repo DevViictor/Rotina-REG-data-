@@ -22,11 +22,14 @@ def tarefas_rafael():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - ABERTURA")
+            st.title("📝 R.E.G - Rafael")
 
+    
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -45,11 +48,15 @@ def tarefas_rafael():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(ABERTURA)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -110,7 +117,7 @@ def tarefas_rafael():
                     row["titulo"],
                     row["descricao"],
                     row["gl"],
-                    "Rafael",
+                    "Rafel",
                     "LAPA",
                     data_atual,        
                     hora_atual,
@@ -146,7 +153,7 @@ def tarefas_rafael():
 
                 data_atual = agora.date()
                 
-                gl = "Rafael"
+                gl = "Rafel"
                 loja= "LAPA"
                 data = data_atual
 
@@ -192,7 +199,7 @@ def tarefas_rafael():
         data_fim = pd.to_datetime(data_fim)
 
         df_periodo = dfr[
-        (dfr["gl"] == "Max") &
+        (dfr["gl"] == "Rafael") &
         (dfr["data"] >= data_inicio) &
         (dfr["data"] <= data_fim)
         ].copy()
@@ -204,9 +211,6 @@ def tarefas_rafael():
         else:
             st.dataframe(df_periodo)
     
-     
-             
-
 
 def tarefas_sara():
        #configuração de pagina
@@ -222,11 +226,14 @@ def tarefas_sara():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - FECHAMENTO")
+            st.title("📝 R.E.G - Sara")
 
+    
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -245,11 +252,15 @@ def tarefas_sara():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(FECHAMENTO)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""

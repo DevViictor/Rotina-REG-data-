@@ -22,11 +22,13 @@ def tarefas_lee():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - ITINERANTE")
+            st.title("📝 R.E.G - Lee")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)","ITINERANTES"]
     
     if menu == "Tarefas":
         
@@ -45,11 +47,15 @@ def tarefas_lee():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "ITINERANTES"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -111,7 +117,7 @@ def tarefas_lee():
                     row["descricao"],
                     row["gl"],
                     "Lee",
-                    "ITINERANTES",
+                    "ITINERANTE",
                     data_atual,        
                     hora_atual,
                     row["observacao"]               
@@ -205,8 +211,6 @@ def tarefas_lee():
             st.dataframe(df_periodo)
     
              
-
-
 def tarefas_marcus():
        #configuração de pagina
 
@@ -221,11 +225,13 @@ def tarefas_marcus():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - ITINERANTE")
+            st.title("📝 R.E.G - Marcus")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)","ITINERANTES"]
     
     if menu == "Tarefas":
         
@@ -244,11 +250,15 @@ def tarefas_marcus():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "ITINERANTES"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -425,6 +435,8 @@ def tarefas_lazaro():
          "Menu",
          ["Tarefas","Registros"])
     
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)","ITINERANTES"]
+    
     if menu == "Tarefas":
         
         st.subheader("Painel de tarefas")
@@ -442,11 +454,15 @@ def tarefas_lazaro():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "ITINERANTES"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -600,5 +616,3 @@ def tarefas_lazaro():
             st.info("Não existem registros para o período selecionado.")
         else:
             st.dataframe(df_periodo)
-    
-

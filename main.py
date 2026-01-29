@@ -99,57 +99,57 @@ def run_navigation():
     
     #Carteira de Felipe
 
-    Tarefas_max =  st.Page(tarefas_max, title="ABERTURA")
-    Tarefas_denise =  st.Page(tarefas_denise, title="FECHAMENTO")
+    Tarefas_max =  st.Page(tarefas_max, title="Tarefas")
+    Tarefas_denise =  st.Page(tarefas_denise, title="Tarefas")
     
-    Tarefas_andressa =  st.Page(tarefas_andressa, title="ABERTURA")
-    Tarefas_diego =  st.Page(tarefas_diego, title="FECHAMENTO")
+    Tarefas_andressa =  st.Page(tarefas_andressa, title="Tarefas")
+    Tarefas_diego =  st.Page(tarefas_diego, title="Tarefas")
 
-    Tarefas_jairo = st.Page(tarefas_jairo, title="ABERTURA")
-    Tarefas_wanderlei = st.Page(tarefas_wanderlei, title="FECHAMENTO")
+    Tarefas_jairo = st.Page(tarefas_jairo, title="Tarefas")
+    Tarefas_wanderlei = st.Page(tarefas_wanderlei, title="Tarefas")
 
     #Carteira Fabiana 
 
-    Tarefas_mercia = st.Page(tarefas_mercia, title="ABERTURA")
-    Tarefas_francisca = st.Page(tarefas_francisca, title="INTERMÉDIO")
-    Tarefas_vinicius = st.Page(tarefas_vinicius, title="FECHAMENTO")
+    Tarefas_mercia = st.Page(tarefas_mercia, title="Tarefas")
+    Tarefas_francisca = st.Page(tarefas_francisca, title="Tarefas")
+    Tarefas_vinicius = st.Page(tarefas_vinicius, title="Tarefas")
     
-    Tarefas_vitor =st.Page(tarefas_vitor, title="ABERTURA")
-    Tarefas_mailan = st.Page(tarefas_mailan, title="FECHAMENTO")
+    Tarefas_vitor =st.Page(tarefas_vitor, title="Tarefas")
+    Tarefas_mailan = st.Page(tarefas_mailan, title="Tarefas")
 
-    Tarefas_dainilo = st.Page(tarefas_danilo, title="ABERTURA")
-    Tarefas_vanessa = st.Page(tarefas_vanessa, title="FECHAMENTO")
+    Tarefas_dainilo = st.Page(tarefas_danilo, title="Tarefas")
+    Tarefas_vanessa = st.Page(tarefas_vanessa, title="Tarefas")
 
-    Tarefas_crislaine = st.Page(tarefas_crislaine, title="ABERTURA")
-    Tarefas_neide = st.Page(tarefas_neide, title="FECHAMENTO")
+    Tarefas_crislaine = st.Page(tarefas_crislaine, title="Tarefas")
+    Tarefas_neide = st.Page(tarefas_neide, title="Tarefas")
 
-    Tarefas_denisep = st.Page(tarefas_deniseP, title="ABERTURA")
-    Tarefas_adrielle = st.Page(tarefas_adrielle, title="FECHAMENTO")
+    Tarefas_denisep = st.Page(tarefas_deniseP, title="Tarefas")
+    Tarefas_adrielle = st.Page(tarefas_adrielle, title="Tarefas")
 
-    Tarefas_maise = st.Page(tarefas_maise, title="ABERTURA")
+    Tarefas_maise = st.Page(tarefas_maise, title="Tarefas")
 
     #Carteira johon
 
-    Tarefas_rafael = st.Page(tarefas_rafael, title="ABERTURA")
-    Tarefas_sara =  st.Page(tarefas_sara, title="FECHAMENTO")
+    Tarefas_rafael = st.Page(tarefas_rafael, title="Tarefas")
+    Tarefas_sara =  st.Page(tarefas_sara, title="Tarefas")
 
-    Tarefas_diegop = st.Page(tarefas_diegoP, title="ABERTURA")
-    Tarefas_marcusp = st.Page(tarefas_marcusp, title="FECHAMENTO")
+    Tarefas_diegop = st.Page(tarefas_diegoP, title="Tarefas")
+    Tarefas_marcusp = st.Page(tarefas_marcusp, title="Tarefas")
 
-    Tarefas_carol = st.Page(tarefas_carol, title="ABERTURA")
-    Tarefas_alana = st.Page(tarefas_alana, title="INTERMÉDIO")
-    Tarefas_igor = st.Page(tarefas_igor, title="FECHAMENTO")
+    Tarefas_carol = st.Page(tarefas_carol, title="Tarefas")
+    Tarefas_alana = st.Page(tarefas_alana, title="Tarefas")
+    Tarefas_igor = st.Page(tarefas_igor, title="Tarefas")
 
     #Carteira chrys
 
-    Tarefas_bruno = st.Page(tarefas_bruno, title="ABERTURA")
-    Tarefas_camyla = st.Page(tarefas_camyla, title="INTERMÉDIO")
-    Tarefas_gilvania = st.Page(tarefas_gilvania, title="FECHAMENTO")
+    Tarefas_bruno = st.Page(tarefas_bruno, title="Tarefas")
+    Tarefas_camyla = st.Page(tarefas_camyla, title="Tarefas")
+    Tarefas_gilvania = st.Page(tarefas_gilvania, title="Tarefas")
 
     #Itinerantes
-    Tarefas_lee = st.Page(tarefas_lee, title="Suas tarefas")
-    Tarefas_marcus = st.Page(tarefas_marcus, title="Suas tarefas")
-    Tarefas_lazaro = st.Page(tarefas_lazaro, title="Suas tarefas")
+    Tarefas_lee = st.Page(tarefas_lee, title="Tarefas")
+    Tarefas_marcus = st.Page(tarefas_marcus, title="Tarefas")
+    Tarefas_lazaro = st.Page(tarefas_lazaro, title="Tarefas")
 
     #Ferias
 
@@ -212,14 +212,14 @@ def run_navigation():
     if role == "Iguatemi1":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Max)": [
                 Tarefas_max
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Denise)": [
                 Tarefas_denise
 
 
@@ -242,14 +242,14 @@ def run_navigation():
     if role == "Iguatemi2":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Andressa)": [
                 Tarefas_andressa
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Diego)": [
                 Tarefas_diego
 
 
@@ -272,14 +272,14 @@ def run_navigation():
     if role == "Norte":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Jairo)": [
                 Tarefas_jairo
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Wanderlei)": [
                 Tarefas_wanderlei
 
             ]
@@ -300,20 +300,20 @@ def run_navigation():
     if role == "Salvador1":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Mércia)": [
                 Tarefas_mercia
                 
             ]
         }
 
         menu2 = {
-            "GLS(INTERMÉDIO)": [
+            "R.E.G (Francisca)": [
                 Tarefas_francisca
             ]
         }
 
         menu3 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Vinicius)": [
                 Tarefas_vinicius
             ]
         }
@@ -327,14 +327,14 @@ def run_navigation():
     if role == "Salvador2":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Vitor)": [
                 Tarefas_vitor
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Mailan)": [
                 Tarefas_mailan
             ]
         }
@@ -354,14 +354,14 @@ def run_navigation():
     if role == "Bela":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Danilo)": [
                 Tarefas_dainilo
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Vanessa)": [
                 Tarefas_vanessa
             ]
         }
@@ -381,14 +381,14 @@ def run_navigation():
     if role == "Paralela":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Crislaine)": [
                 Tarefas_crislaine
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Neide)": [
                 Tarefas_neide
             ]
         }
@@ -408,14 +408,14 @@ def run_navigation():
     if role == "Parque":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Denise)": [
                 Tarefas_denisep
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Adrielle)": [
                 Tarefas_adrielle
             ]
         }
@@ -435,7 +435,7 @@ def run_navigation():
     if role == "Davila":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Maise)": [
                 Tarefas_maise
                 
             ]
@@ -462,14 +462,14 @@ def run_navigation():
     if role == "Lapa":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Rafael)": [
                 Tarefas_rafael
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Sara)": [
                 Tarefas_sara
                 
             ]
@@ -490,14 +490,14 @@ def run_navigation():
     if role == "Piedade":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Diego)": [
                 Tarefas_diegop
                 
             ]
         }
 
         menu2 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Marcus)": [
                 Tarefas_marcusp
                 
             ]
@@ -519,14 +519,14 @@ def run_navigation():
     if role == "Barra":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Carol)": [
                 Tarefas_carol
                 
             ]
         }
 
         menu2 = {
-            "GLS(INTERMÉDIO)": [
+            "R.E.G (Alana)": [
                 Tarefas_alana
 
 
@@ -535,7 +535,7 @@ def run_navigation():
         }
 
         menu3 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Igor)": [
                 Tarefas_igor
             ]
         }
@@ -549,21 +549,21 @@ def run_navigation():
     if role == "Boulevard":
 
         menu = {
-            "GLS(ABERTURA)": [
+            "R.E.G (Bruno)": [
                 Tarefas_bruno
                 
             ]
         }
 
         menu2 = {
-            "GLS(INTERMÉDIO)": [
+            "R.E.G (Camyla)": [
                 Tarefas_camyla
 
             ]
         }
 
         menu3 = {
-            "GLS(FECHAMENTO)": [
+            "R.E.G (Gilvania)": [
                 Tarefas_gilvania
             ]
         }
@@ -577,21 +577,21 @@ def run_navigation():
     if role == "Itinerantes":
 
         menu = {
-            "Lee": [
+            "R.E.G (Lee)": [
                 Tarefas_lee
                 
             ]
         }
 
         menu2 = {
-            "Marcus": [
+            "R.E.G (Marcus)": [
                 Tarefas_marcus
 
             ]
         }
 
         menu3 = {
-            "Lázaro": [
+            "R.E.G (Lázaro)": [
                 Tarefas_lazaro
             ]
         }
@@ -601,8 +601,6 @@ def run_navigation():
                 Ferias_itinerantes
             ]
         }
-    
-
 
     # Criar navegação
     

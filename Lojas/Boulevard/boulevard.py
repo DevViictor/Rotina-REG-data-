@@ -22,11 +22,13 @@ def tarefas_bruno():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - ABERTURA")
+            st.title("📝 R.E.G - Bruno")
     
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -45,11 +47,15 @@ def tarefas_bruno():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(ABERTURA)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -222,11 +228,13 @@ def tarefas_gilvania():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - FECHAMENTO")
+            st.title("📝 R.E.G - Gilvania")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -245,11 +253,15 @@ def tarefas_gilvania():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(ABERTURA)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -420,11 +432,13 @@ def tarefas_camyla():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - Initermédio")
+            st.title("📝 R.E.G - Camyla")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -443,11 +457,15 @@ def tarefas_camyla():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(ABERTURA)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -595,8 +613,6 @@ def tarefas_camyla():
         (dfr["data"] <= data_fim)
         ].copy()
 
-    
-    
         if df_periodo.empty:
             st.info("Não existem registros para o período selecionado.")
         else:

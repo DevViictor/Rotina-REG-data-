@@ -22,11 +22,13 @@ def tarefas_vitor():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - ABERTURA")
+            st.title("📝 R.E.G - Vitor")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -45,11 +47,15 @@ def tarefas_vitor():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(ABERTURA)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -111,7 +117,7 @@ def tarefas_vitor():
                     row["descricao"],
                     row["gl"],
                     "Vitor",
-                    "Salvador ||",
+                    "SSA ||",
                     data_atual,        
                     hora_atual,
                     row["observacao"]               
@@ -147,7 +153,7 @@ def tarefas_vitor():
                 data_atual = agora.date()
                 
                 gl = "Vitor"
-                loja= "Salvador ||"
+                loja= "SSA ||"
                 data = data_atual
 
                 registrar_folga(gl,loja,data)
@@ -203,8 +209,6 @@ def tarefas_vitor():
             st.info("Não existem registros para o período selecionado.")
         else:
             st.dataframe(df_periodo)
-     
-             
 
 
 def tarefas_mailan():
@@ -221,11 +225,13 @@ def tarefas_mailan():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - FECHAMENTO")
+            st.title("📝 R.E.G - Mailan")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -244,11 +250,15 @@ def tarefas_mailan():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(FECHAMENTO)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -310,7 +320,7 @@ def tarefas_mailan():
                     row["descricao"],
                     row["gl"],
                     "Mailan",
-                    "Salvador ||",
+                    "SSA ||",
                     data_atual,        
                     hora_atual,
                     row["observacao"]               
@@ -346,7 +356,7 @@ def tarefas_mailan():
                 data_atual = agora.date()
                 
                 gl = "Mailan"
-                loja= "Salvador ||"
+                loja= "SSA ||"
                 data = data_atual
 
                 registrar_folga(gl,loja,data)

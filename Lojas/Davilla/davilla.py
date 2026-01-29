@@ -22,11 +22,13 @@ def tarefas_maise():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - ABERTURA")
+            st.title("📝 R.E.G - Maise")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -45,11 +47,15 @@ def tarefas_maise():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(ABERTURA)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -111,7 +117,7 @@ def tarefas_maise():
                     row["descricao"],
                     row["gl"],
                     "Maise",
-                    "DIAS D`VILA",
+                    "DIAS D´VILA",
                     data_atual,        
                     hora_atual,
                     row["observacao"]               
@@ -147,7 +153,7 @@ def tarefas_maise():
                 data_atual = agora.date()
                 
                 gl = "Maise"
-                loja= "DIAS D`VILA"
+                loja= "DIAS D´VILA"
                 data = data_atual
 
                 registrar_folga(gl,loja,data)

@@ -22,11 +22,13 @@ def tarefas_jairo():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - ABERTURA")
+            st.title("📝 R.E.G - Jairo")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -45,11 +47,15 @@ def tarefas_jairo():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(ABERTURA)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
@@ -221,11 +227,13 @@ def tarefas_wanderlei():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - FECHAMENTO")
+            st.title("📝 R.E.G - Wanderlei")
 
     menu = st.sidebar.radio(
          "Menu",
          ["Tarefas","Registros"])
+    
+    op = ["","GLS(ABERTURA)","GLS(INTERMEDIO)","GLS(FECHAMENTO)"]
     
     if menu == "Tarefas":
         
@@ -244,11 +252,15 @@ def tarefas_wanderlei():
             return df
         
         #Dados dos registros 
-    
+
+        periodo_gl = st.sidebar.selectbox("Selecione o periodo",op)
     
         df= carregar_dados()
 
-        df_abertura = df[df["gl"] == "GLS(FECHAMENTO)"].copy()
+        df_abertura = df[df["gl"] == periodo_gl].copy()
+
+        if df_abertura.empty:
+            st.info("Selecione o periodo de tarefas desejado")
 
         df_abertura["registrar"] = False
         df_abertura["observacao"] = ""
