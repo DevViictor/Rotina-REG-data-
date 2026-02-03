@@ -117,7 +117,7 @@ def tarefas_rafael():
                     row["titulo"],
                     row["descricao"],
                     row["gl"],
-                    "Rafel",
+                    "Rafael",
                     "LAPA",
                     data_atual,        
                     hora_atual,
@@ -153,7 +153,7 @@ def tarefas_rafael():
 
                 data_atual = agora.date()
                 
-                gl = "Rafel"
+                gl = "Rafael"
                 loja= "LAPA"
                 data = data_atual
 
