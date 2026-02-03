@@ -226,7 +226,7 @@ def tarefas_vanessa():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - Vanessa")
+            st.title("📝 R.E.G - Crislaine")
 
     menu = st.sidebar.radio(
          "Menu",
@@ -320,7 +320,7 @@ def tarefas_vanessa():
                     row["titulo"],
                     row["descricao"],
                     row["gl"],
-                    "Vanessa",
+                    "Crislaine",
                     "BELA",
                     data_atual,        
                     hora_atual,
@@ -356,7 +356,7 @@ def tarefas_vanessa():
 
                 data_atual = agora.date()
                 
-                gl = "Vanessa"
+                gl = "Crislaine"
                 loja= "BELA"
                 data = data_atual
 
@@ -402,7 +402,7 @@ def tarefas_vanessa():
         data_fim = pd.to_datetime(data_fim)
 
         df_periodo = dfr[
-        (dfr["gl"] == "Vanessa") &
+        (dfr["gl"] == "Crislaine") &
         (dfr["data"] >= data_inicio) &
         (dfr["data"] <= data_fim)
         ].copy()

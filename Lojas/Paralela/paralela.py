@@ -22,7 +22,7 @@ def tarefas_crislaine():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - Crislaine")
+            st.title("📝 R.E.G - Vanessa")
 
     menu = st.sidebar.radio(
          "Menu",
@@ -116,7 +116,7 @@ def tarefas_crislaine():
                     row["titulo"],
                     row["descricao"],
                     row["gl"],
-                    "Crislaine",
+                    "Vanessa",
                     "PARALELA",
                     data_atual,        
                     hora_atual,
@@ -152,7 +152,7 @@ def tarefas_crislaine():
 
                 data_atual = agora.date()
                 
-                gl = "Crislaine"
+                gl = "Vanessa"
                 loja= "PARALELA"
                 data = data_atual
 
@@ -198,7 +198,7 @@ def tarefas_crislaine():
         data_fim = pd.to_datetime(data_fim)
 
         df_periodo = dfr[
-        (dfr["gl"] == "Crislaine") &
+        (dfr["gl"] == "Vanessa") &
         (dfr["data"] >= data_inicio) &
         (dfr["data"] <= data_fim)
         ].copy()

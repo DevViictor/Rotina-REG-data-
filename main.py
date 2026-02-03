@@ -381,7 +381,7 @@ def run_navigation():
     if role == "Paralela":
 
         menu = {
-            "R.E.G (Crislaine)": [
+            "R.E.G (Vanessa)": [
                 Tarefas_crislaine
                 
             ]
