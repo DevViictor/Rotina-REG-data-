@@ -211,7 +211,7 @@ def tarefas_lee():
             st.dataframe(df_periodo)
     
              
-def tarefas_marcus():
+def tarefas_danilo():
        #configuração de pagina
 
     icon = Image.open("image/vivo.png")
@@ -225,7 +225,7 @@ def tarefas_marcus():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - Marcus")
+            st.title("📝 R.E.G - Danilo")
 
     menu = st.sidebar.radio(
          "Menu",
@@ -319,7 +319,7 @@ def tarefas_marcus():
                     row["titulo"],
                     row["descricao"],
                     row["gl"],
-                    "Marcus",
+                    "Danilo",
                     "ITINERANTE",
                     data_atual,        
                     hora_atual,
@@ -355,7 +355,7 @@ def tarefas_marcus():
 
                 data_atual = agora.date()
                 
-                gl = "Marcus"
+                gl = "Danilo"
                 loja= "ITINERANTE"
                 data = data_atual
 
@@ -401,7 +401,7 @@ def tarefas_marcus():
         data_fim = pd.to_datetime(data_fim)
 
         df_periodo = dfr[
-        (dfr["gl"] == "Marcus") &
+        (dfr["gl"] == "Danilo") &
         (dfr["data"] >= data_inicio) &
         (dfr["data"] <= data_fim)
         ].copy()

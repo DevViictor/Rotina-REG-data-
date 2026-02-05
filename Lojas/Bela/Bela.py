@@ -6,7 +6,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 from data.db import registrar_folga
 
-def tarefas_danilo():
+def tarefas_marcus():
     
     #configuração de pagina
 
@@ -21,7 +21,7 @@ def tarefas_danilo():
             st.image(image_logo)
 
     with cola:
-            st.title("📝 R.E.G - Danilo")
+            st.title("📝 R.E.G - Marcus")
 
     
     menu = st.sidebar.radio(
@@ -116,7 +116,7 @@ def tarefas_danilo():
                     row["titulo"],
                     row["descricao"],
                     row["gl"],
-                    "Danilo",
+                    "Marcus",
                     "BELA",
                     data_atual,        
                     hora_atual,
@@ -152,7 +152,7 @@ def tarefas_danilo():
 
                 data_atual = agora.date()
                 
-                gl = "Danilo"
+                gl = "Marcus"
                 loja= "BELA"
                 data = data_atual
 
@@ -198,7 +198,7 @@ def tarefas_danilo():
         data_fim = pd.to_datetime(data_fim)
 
         df_periodo = dfr[
-        (dfr["gl"] == "Danilo") &
+        (dfr["gl"] == "Marcus") &
         (dfr["data"] >= data_inicio) &
         (dfr["data"] <= data_fim)
         ].copy()
@@ -212,7 +212,7 @@ def tarefas_danilo():
      
              
 
-def tarefas_vanessa():
+def tarefas_crislaine():
        #configuração de pagina
 
     icon = Image.open("image/vivo.png")

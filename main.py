@@ -9,15 +9,15 @@ from Lojas.Iguatemi.iguatemi2 import tarefas_diego,tarefas_andressa
 from Lojas.Nort.Nort import tarefas_jairo, tarefas_wanderlei
 from Lojas.Salvador.Salvador1 import tarefas_francisca,tarefas_mercia,tarefas_vinicius
 from Lojas.Salvador.Salvador2 import tarefas_mailan,tarefas_vitor
-from Lojas.Bela.Bela import tarefas_danilo,tarefas_vanessa
-from Lojas.Paralela.paralela import tarefas_crislaine,tarefas_neide
+from Lojas.Bela.Bela import tarefas_marcus,tarefas_crislaine
+from Lojas.Paralela.paralela import tarefas_vanessa,tarefas_neide
 from Lojas.Parque.parque import tarefas_adrielle,tarefas_deniseP
 from Lojas.Davilla.davilla import tarefas_maise
 from Lojas.Lapa.lapa import tarefas_rafael,tarefas_sara
 from Lojas.Piedade.piedade import tarefas_diegoP,tarefas_marcusp
 from Lojas.Barra.Barra import tarefas_alana,tarefas_carol,tarefas_igor
 from Lojas.Boulevard.boulevard  import tarefas_bruno,tarefas_camyla,tarefas_gilvania
-from Lojas.Itinerante.itinerantes import tarefas_lazaro,tarefas_lee,tarefas_marcus
+from Lojas.Itinerante.itinerantes import tarefas_lazaro,tarefas_lee,tarefas_danilo
 from Lojas.Ferias.iguatemi_ferias import ferias_iguatemi1,ferias_iguatemi2
 from Lojas.Ferias.barra_ferias import ferias_barra
 from Lojas.Ferias.bela_ferias import ferias_bela
@@ -117,10 +117,11 @@ def run_navigation():
     Tarefas_vitor =st.Page(tarefas_vitor, title="Tarefas")
     Tarefas_mailan = st.Page(tarefas_mailan, title="Tarefas")
 
-    Tarefas_dainilo = st.Page(tarefas_danilo, title="Tarefas")
-    Tarefas_vanessa = st.Page(tarefas_vanessa, title="Tarefas")
-
+    Tarefas_marcus = st.Page(tarefas_marcus, title="Tarefas")
     Tarefas_crislaine = st.Page(tarefas_crislaine, title="Tarefas")
+    
+
+    Tarefas_vanessa = st.Page(tarefas_vanessa, title="Tarefas")
     Tarefas_neide = st.Page(tarefas_neide, title="Tarefas")
 
     Tarefas_denisep = st.Page(tarefas_deniseP, title="Tarefas")
@@ -148,7 +149,7 @@ def run_navigation():
 
     #Itinerantes
     Tarefas_lee = st.Page(tarefas_lee, title="Tarefas")
-    Tarefas_marcus = st.Page(tarefas_marcus, title="Tarefas")
+    Tarefas_danilo = st.Page(tarefas_danilo, title="Tarefas")
     Tarefas_lazaro = st.Page(tarefas_lazaro, title="Tarefas")
 
     #Ferias
@@ -354,15 +355,15 @@ def run_navigation():
     if role == "Bela":
 
         menu = {
-            "R.E.G (Danilo)": [
-                Tarefas_dainilo
+            "R.E.G (Marcus)": [
+                Tarefas_marcus
                 
             ]
         }
 
         menu2 = {
-            "R.E.G (Vanessa)": [
-                Tarefas_vanessa
+            "R.E.G (Crislaine)": [
+                Tarefas_crislaine
             ]
         }
 
@@ -584,8 +585,8 @@ def run_navigation():
         }
 
         menu2 = {
-            "R.E.G (Marcus)": [
-                Tarefas_marcus
+            "R.E.G (Danilo)": [
+                Tarefas_danilo
 
             ]
         }
